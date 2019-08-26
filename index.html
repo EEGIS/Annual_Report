@@ -111,10 +111,10 @@
         }
 
           .marker {
-            background-image: url('mapbox-icon.png');
-            background-size: cover;
-            width: 40px;
-            height: 40px;
+            background: #a3b33a;
+  			background-size: cover;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
             cursor: pointer;
         }
@@ -249,7 +249,7 @@ map.addControl(new mapboxgl.NavigationControl({ position:'top-left'}));
              "URL":"http://www.eartheconomics.org/all-publications/publicbenefits-privateforests",
              "blurb": "Forests are among Pierce County's most valuable natural assets, supporting clean water and air, bolstering climate stability, and sustaining local communities.",
              "description": "Pierce County, WA",
-             "image": 'images/Pierce.jpg'
+             "image": "images/Pierce.jpg"
          }
           },
      {
@@ -450,7 +450,7 @@ map.addControl(new mapboxgl.NavigationControl({ position:'top-left'}));
 
     var popup = new mapboxgl.Popup({closeonClick: true})
           .setLngLat(currentFeature.geometry.coordinates)
-          .setHTML('<h3><a href="' + currentFeature.properties.URL + '">' + currentFeature.properties.title + '</a></h3><h4>' + currentFeature.properties.blurb + '</p></h4>'+'<img src="'+ currentFeature.properties.image +'" style="width:200px;height:100px;">')
+          .setHTML('<h3>' +  currentFeature.properties.title + '</a></h3><h4>' + currentFeature.properties.blurb + '</p></h4>'+'<img src="'+ currentFeature.properties.image +'" style="width:200px;height:100px;">')
           .addTo(map);
   }
 
